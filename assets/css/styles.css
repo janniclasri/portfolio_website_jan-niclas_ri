@@ -384,6 +384,10 @@ img {
   transition: .3s;
 }
 
+.skills__arrow:hover{
+  color: var(--first-color-alt);
+}
+
 .skills__title{
   font-size: var(--h3-font-size);
 }
@@ -392,6 +396,30 @@ img {
   display: flex;
   justify-content: space-between;
   margin-bottom: var(--mb-0-5);
+}
+
+.skills__evaluation,
+.skills__name{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.skills__evaluation{
+  color: var(--first-color-lighter);
+}
+
+.skills__close .skills__list{
+  height: 0;
+  overflow: hidden;
+}
+
+.skills__open .skills__list{
+  height: max-content;
+  margin-bottom: var(--mb-2-5);
+}
+
+.skills__open .skills__arrow{
+  transform: rotate(-180deg);
 }
 
 /*==================== QUALIFICATION ====================*/

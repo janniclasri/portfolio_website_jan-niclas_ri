@@ -31,7 +31,26 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
 /*==================== ACCORDION SKILLS ====================*/
+//Get the Content and the Headers in a const
+const skillsContent = document.getElementsByClassName('skills__content'),
+      skillsHeader = document.querySelectorAll('.skills__header')
 
+function toggleSkills(){
+    //Get the ClassName of the current Element to check if its open or closed
+    let itemClass = this.parentNode.className
+    //Closes all skills__content's   
+    for(i = 0; i < skillsContent.length; i++){
+        skillsContent[i].className = 'skills__content skills__close'
+    }
+    //If the itemClass is closed it will be set to open
+    if(itemClass === 'skills__content skills__close'){
+        this.parentNode.className = 'skills__content skills__open'
+    }
+}
+
+skillsHeader.forEach((el) => {
+    el.addEventListener('click', toggleSkills)
+})
 
 /*==================== QUALIFICATION TABS ====================*/
 
